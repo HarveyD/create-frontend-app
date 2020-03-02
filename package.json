@@ -1,0 +1,26 @@
+{
+  "name": "frontend-scaffold-tool",
+  "version": "0.0.1",
+  "description": "A CLI tool that extends Create React App with templates, dependencies and scripts.",
+  "main": "index.js",
+  "bin": {
+    "": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Harvey Delaney",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "create-react-app": "^3.3.0",
+    "fs-extra": "^8.1.0",
+    "inquirer": "^7.0.1",
+    "lodash.set": "^4.3.2",
+    "ora": "^4.0.3",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
+    "redux-saga": "^1.1.3",
+    "shelljs": "^0.8.3"
+  }
+}
