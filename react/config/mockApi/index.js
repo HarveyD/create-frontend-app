@@ -1,4 +1,5 @@
-const mockApiTemplates = require("../templates/mockApiTemplates");
+const apiIndex = require("./templates/index");
+const mockController = require("./templates/mockController");
 
 module.exports  = {
   name: "withMockApi",
@@ -12,5 +13,8 @@ module.exports  = {
       value: "run-p start mock-api"
     }
   ],
-  templates: mockApiTemplates
+  templates: [
+    { path: "mock-api/index.js", file: apiIndex },
+    { path: "mock-api/mockController.js", file: mockController }
+  ]
 };

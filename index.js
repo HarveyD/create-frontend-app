@@ -28,7 +28,6 @@ const run = async () => {
   const answer = await askAppQuestions();
   const { appName, appType } = answer;
 
-  // Todo: Perform some validation on appName here to make sure it's kebab case
   if (!appName || appName.length <= 0) {
     console.log(`Please enter a valid name for your new app.`.red);
     return process.exit(0);

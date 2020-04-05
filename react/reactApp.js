@@ -3,7 +3,7 @@ const shell = require("shelljs");
 shell.config.silent = true;
 const inquirer = require("inquirer");
 const fse = require("fs-extra");
-const reactConfigList = require("./config/config");
+const reactConfigList = require("./config");
 const set = require("lodash.set");
 const ora = require("ora");
 
@@ -35,21 +35,20 @@ const createReactApp = appName => {
 
   return new Promise((resolve, reject) => {
     shell.exec(
-      `npx create-react-app ${appName} --template typescript --use-npm`,
+      `npx create-react-app ${appName} --use-npm`,
       () => {
         const cdRes = shell.cd(appName);
-  
+
         if (cdRes.code !== 0) {
           console.log(`Error changing directory to: ${appName}`.red);
           reject();
         }
-  
+
         spinner.succeed();
         resolve();
       }
     );
   });
-
 };
 
 const installPackages = async configList => {
