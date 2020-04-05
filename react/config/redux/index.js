@@ -1,12 +1,12 @@
-const rootStore = require("./config/redux/templates/store");
-const rootSagas = require("./config/redux/templates/sagas");
-const rootReducer = require("./config/redux/templates/reducer");
-const rootState = require("./config/redux/templates/state");
+const rootStore = require("./templates/store");
+const rootSagas = require("./templates/sagas");
+const rootReducer = require("./templates/reducer");
+const rootState = require("./templates/state");
 
-const actions = require("./config/redux/templates/application/actions");
-const reducer = require("./config/redux/templates/application/reducer");
-const sagas = require("./config/redux/templates/application/sagas");
-const selectors = require("./config/redux/templates/application/selectors");
+const actions = require("./templates/application/actions");
+const reducer = require("./templates/application/reducer");
+const sagas = require("./templates/application/sagas");
+const selectors = require("./templates/application/selectors");
 
 module.exports = {
   name: "withRedux",
